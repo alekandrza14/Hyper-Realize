@@ -119,7 +119,7 @@ public class HyperObjectMenader : MonoBehaviour
                 t.shapeType = hrm.shapeTypes[i];
                 t.smoothRadius = hrm.Blend[i];
                 t.transform.localScale = new Vector3(hrm.scale[i].x, hrm.scale[i].y, hrm.scale[i].z);
-                t.transform.rotation = Quaternion.Euler(new Vector3(hrm.rot[i].w, hrm.rot[i].h, hrm.rot[i].p));
+                t.transform.rotation = Quaternion.Euler(new Vector3(hrm.rot[i].x, hrm.rot[i].y, hrm.rot[i].z));
 
             }
 
@@ -165,7 +165,7 @@ public class HyperObjectMenader : MonoBehaviour
                     t.shapeType = hrm.shapeTypes[i];
                     t.smoothRadius = hrm.Blend[i];
                     t.transform.localScale = new Vector3(hrm.scale[i].x, hrm.scale[i].y, hrm.scale[i].z);
-                    t.transform.rotation = Quaternion.Euler(new Vector3(hrm.rot[i].w, hrm.rot[i].h, hrm.rot[i].p));
+                    t.transform.rotation = Quaternion.Euler(new Vector3(hrm.rot[i].x, hrm.rot[i].y, hrm.rot[i].z));
 
                 }
 
