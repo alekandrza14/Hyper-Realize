@@ -66,6 +66,8 @@ public class HyperObjectMenader : MonoBehaviour
 
     public void save()
     {
+        selectedHyperObject.isloader = true;
+       selectedHyperObject.ho = null;
         p = false;
         loader.SetActive(true);
         s = FindObjectsOfType<HyperObject>();
@@ -94,6 +96,8 @@ public class HyperObjectMenader : MonoBehaviour
     {
         p = true;
 
+        selectedHyperObject.isloader = true;
+        selectedHyperObject.ho = null;
         loader.SetActive(true);
 
         if (File.Exists("test.hrm"))
@@ -197,12 +201,14 @@ public class HyperObjectMenader : MonoBehaviour
            
         }
 
+        selectedHyperObject.isloader = false;
         loader.SetActive(false);
     }
 
     public void canel()
     {
 
+        selectedHyperObject.isloader = false;
         loader.SetActive(false);
     }
     public void Create()
@@ -229,15 +235,27 @@ public class HyperObjectMenader : MonoBehaviour
         {
             GameObject s = Instantiate(Resources.Load<GameObject>("Hyper_fivecel"), new Vector3(0, 2, 0), Quaternion.identity);
             selectedHyperObject.ho = s.GetComponent<HyperObject>();
-           
+
         }
         if (dd.value == 4)
         {
             GameObject s = Instantiate(Resources.Load<GameObject>("Hyper_sixtencell"), new Vector3(0, 2, 0), Quaternion.identity);
             selectedHyperObject.ho = s.GetComponent<HyperObject>();
-           
+
         }
-        
+        if (dd.value == 5)
+        {
+            GameObject s = Instantiate(Resources.Load<GameObject>("Hyper_Terrain"), new Vector3(0, 2, 0), Quaternion.identity);
+            selectedHyperObject.ho = s.GetComponent<HyperObject>();
+
+        }
+        if (dd.value == 6)
+        {
+            GameObject s = Instantiate(Resources.Load<GameObject>("Hyper_Clone"), new Vector3(0, 2, 0), Quaternion.identity);
+            selectedHyperObject.ho = s.GetComponent<HyperObject>();
+
+        }
+
     }
 
     void Update()

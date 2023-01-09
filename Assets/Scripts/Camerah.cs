@@ -7,7 +7,12 @@ public class Camerah : MonoBehaviour
     public GameObject focus;
     void Update()
     {
-        focus.transform.Rotate(Input.GetAxis("Vertical"), 0, 0);
-        transform.Rotate(0, -Input.GetAxis("Horizontal"), 0);
+        if (!selectedHyperObject.isloader)
+        {
+
+
+            focus.transform.Rotate(Input.GetAxis("Vertical"), 0, 0);
+            transform.Rotate(0, -Input.GetAxis("Horizontal"), 0);
+        }
     }
 }

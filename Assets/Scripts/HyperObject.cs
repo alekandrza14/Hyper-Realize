@@ -4,6 +4,7 @@ using UnityEngine;
 public class selectedHyperObject
 {
     public static HyperObject ho;
+    public static bool isloader;
 }
 
 public class HyperObject : MonoBehaviour
